@@ -3,7 +3,7 @@ FROM ubuntu:latest
 COPY sources.list /etc/apt/sources.list
 RUN apt-get update \
  && apt-get install -y apache2 libapache2-mod-fastcgi
-RUN a2enmod actions
+RUN a2enmod actions && a2enmod proxy && a2enmod proxy_http
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data

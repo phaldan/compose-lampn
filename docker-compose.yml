@@ -9,6 +9,7 @@ web:
   - php5.5
   - php5.6
   - php7
+  - node
 
 php5.5:
  build: php
@@ -40,3 +41,9 @@ db:
   - ./db:/var/lib/mysql
  ports:
   - "3306:3306"
+
+node:
+ build: git://github.com/phaldan/docker-nitro.git#master
+ volumes:
+  - ../my-nitro:/home/yeoman/nitro
+ 
