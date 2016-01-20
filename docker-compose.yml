@@ -1,0 +1,7 @@
+web:
+ build: apache
+ volumes:
+  - ./apache/vhosts:/etc/apache2/sites-enabled
+  - ./htdocs:/var/www
+ ports:
+  - "8080:80"
