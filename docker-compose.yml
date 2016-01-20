@@ -45,5 +45,5 @@ db:
 node:
  build: git://github.com/phaldan/docker-nitro.git#master
  volumes:
-  - ../my-nitro:/home/yeoman/nitro
+  - ./node:/home/yeoman/nitro
  
